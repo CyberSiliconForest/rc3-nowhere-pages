@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://cybersiliconforest.github.io/rc3-nowhere-pages/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'SiliconForest RC3 Nowhere'
 theme = 'terminal'
