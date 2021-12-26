@@ -3,7 +3,7 @@
 <title>Insecam :: SiliconForest RC3 Nowhere</title>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=description content>
+<meta name=description content="Insecam and Korea Insecam is a website which crawls the insecure network cameras connected to the Internet without any authentication throughout the world. According to the website&amp;rsquo;s FAQ, they are collecting the network cameras without password protection and listing the live video feed of them. They also claims that the cameras are not hacked, but the vulnerable software may enable the remote access without any authentication. The website provides a grouped view by camera manufacturers, installed countries and cities, places.">
 <meta name=keywords content=",">
 <meta name=robots content="noodp">
 <link rel=canonical href=https://pages.nowhere.rc3.silicon.moe/posts/insecam/>
@@ -15,7 +15,7 @@
 <meta property="og:locale" content="en">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Insecam">
-<meta property="og:description" content>
+<meta property="og:description" content="Insecam and Korea Insecam is a website which crawls the insecure network cameras connected to the Internet without any authentication throughout the world. According to the website&amp;rsquo;s FAQ, they are collecting the network cameras without password protection and listing the live video feed of them. They also claims that the cameras are not hacked, but the vulnerable software may enable the remote access without any authentication. The website provides a grouped view by camera manufacturers, installed countries and cities, places.">
 <meta property="og:url" content="https://pages.nowhere.rc3.silicon.moe/posts/insecam/">
 <meta property="og:site_name" content="SiliconForest RC3 Nowhere">
 <meta property="og:image" content="https://pages.nowhere.rc3.silicon.moe/">
@@ -49,7 +49,65 @@ Terminal
 #<a href=https://pages.nowhere.rc3.silicon.moe/tags/></a>&nbsp;
 #<a href=https://pages.nowhere.rc3.silicon.moe/tags/></a>&nbsp;
 </span>
-<div class=post-content></div>
+<div class=post-content><div>
+<h1 id=insecam-and-korea>Insecam and Korea<a href=#insecam-and-korea class=hanchor arialabel=Anchor>&#8983;</a> </h1>
+<p><a href=http://insecam.org>Insecam</a> is a website which crawls the insecure network cameras connected to the Internet without any authentication throughout the world.
+According to the <a href=http://insecam.org/en/faq/>website&rsquo;s FAQ</a>, they are collecting the network cameras without password protection and listing the live video feed of them.
+They also claims that the cameras are not hacked, but the vulnerable software may enable the remote access without any authentication.
+The website provides a grouped view by camera manufacturers, installed countries and cities, places.
+Unless the network camera is supposed to broadcast a public video stream, the owner of the network camera is supposed to apply at least a proper password authentication to protect their video stream.</p>
+<p>The installation and usage of video surveillance devices are regulated by Personal Information Protection Act<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup>, Article 25.
+According to the law, the owner of the video surveilance device must secure their device in order to protect the personal information.
+In addition, the device must not record any voice and record places outside of its intended purpose.
+Regardless of the legal code, the number of video surveilance devices installed by public institutions are in constant rise<sup id=fnref:2><a href=#fn:2 class=footnote-ref role=doc-noteref>2</a></sup>, and about 1.3 million devices are installed as of 2020.
+There is no accurate number of video surveilance devices installed by private person, but one report estimates the number as 13 million devices in 2017<sup id=fnref:3><a href=#fn:3 class=footnote-ref role=doc-noteref>3</a></sup>.
+In addition, about 89 percent of Korean cars have dashcams installed in 2019<sup id=fnref:4><a href=#fn:4 class=footnote-ref role=doc-noteref>4</a></sup>.</p>
+<p>At least the legal code seems to be good, but how come the picture below became the reality?</p>
+<p><img src=../images/insecam_korea.png alt="South Korea is in 2nd place of Insecam"></p>
+<p>As of the time of the writing, South Korea is ranked 2nd in the <a href=http://insecam.org>Insecam</a>&rsquo;s country list.
+To make things even more ironical, Insecam website is blocked in Korea by Korea Communications Standards Commission (KCSC).
+The block was decided around early 2016<sup id=fnref:5><a href=#fn:5 class=footnote-ref role=doc-noteref>5</a></sup>, to &ldquo;protect&rdquo; the privacy of Korean people.
+This block is not effective against those who outside of Korea, and as everyone knows, cybercriminals these days do not know the national border.
+The root cause of this problem &ndash; unprotected network camera &ndash; remains unsolved, as Korean police decided that there is no way to inform the individuals on the problem of their network camera<sup id=fnref:5><a href=#fn:5 class=footnote-ref role=doc-noteref>5</a></sup>.
+To make things more worse, rebadged cheap camera by Korean companies often do not get adequate support from the original manufacturer, leaving the users vulnerable.
+This was demonstrated in Petzview incident around 2018.</p>
+<h2 id=the-petzview-incident>The Petzview Incident<a href=#the-petzview-incident class=hanchor arialabel=Anchor>&#8983;</a> </h2>
+<p>There was a network camera named Petzview, which was marketed towards companion animal owners to monitor their loved ones from outside of their home.
+The device was sold for several years, and was used by not only individual peoples but also by veterinary clinics too.
+The hardware itself was not that special as seen in the image below.</p>
+<p><img src=../images/petzview.jpg alt="Petzview hardware"></p>
+<p>In October 2018, Petzview announced that they will shut down their web service<sup id=fnref:6><a href=#fn:6 class=footnote-ref role=doc-noteref>6</a></sup> to share the live footage of Petzview devices<sup id=fnref:7><a href=#fn:7 class=footnote-ref role=doc-noteref>7</a></sup> and discontinue the mobile app to control the network camera.
+According to the news report, an owner of Petzview network camera found that their camera had been compromised in <strong>2012</strong>, and found the security vulnerability in <strong>2014</strong>, which he exploited to illegally record the other Petzview users for at least 4 years.
+The attack was only discovered in 2018, and the hacker was arrested for privacy invasions by illegal recording.
+Well, if you look into the source code of the web archive, you may find interesting thing there which tells about the security mindset of the Petzview designers :(</p>
+<p>As long as these kind of insecure network cameras are connected to the Internet without software updates, and Korean authorities are burying their head in the sand like just blocking the Insecam website instead of regulating the market tightly, we don&rsquo;t believe that the number of network cameras listed in the Insecam will decrease.</p>
+<section class=footnotes role=doc-endnotes>
+<hr>
+<ol>
+<li id=fn:1 role=doc-endnote>
+<p><a href=https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%B2%95>개인정보보호법 (in Korean)</a>&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+<li id=fn:2 role=doc-endnote>
+<p><a href="https://www.index.go.kr/potal/main/EachDtlPageDetail.do?idx_cd=2855">공공기관 CCTV 설치 및 운영 (in Korean)</a>&#160;<a href=#fnref:2 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+<li id=fn:3 role=doc-endnote>
+<p><a href="https://www.cctvnews.co.kr/news/articleView.html?idxno=120089">공공안전 책임지는 CCTV, 보급의 역사와 현황 (in Korean)</a>&#160;<a href=#fnref:3 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+<li id=fn:4 role=doc-endnote>
+<p><a href="https://www.trendmonitor.co.kr/tmweb/trend/allTrend/detail.do?bIdx=1780&code=0304&trendType=CKOREA">점점 더 강조되는 ‘차량용 블랙박스’의 중요성, 이제 운전자의 ‘필수품’으로 자리잡아 (in Korean)</a>&#160;<a href=#fnref:4 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+<li id=fn:5 role=doc-endnote>
+<p><a href="http://www.incheonilbo.com/news/articleView.html?idxno=704639">공기관·유치원·학교 CCTV 해외노출 &lsquo;무방비&rsquo; (in Korean)</a>&#160;<a href=#fnref:5 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+<li id=fn:6 role=doc-endnote>
+<p><a href=https://www.news1.kr/articles/?3467060>해킹됐던 반려동물 전문 IP카메라 사이트 &lsquo;펫츠뷰&rsquo; 내달말 폐쇄 (in Korean)</a>&#160;<a href=#fnref:6 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+<li id=fn:7 role=doc-endnote>
+<p><a href="http://web.archive.org/web/20180831090559/http://petstory.co/bsbbs/list?tn=petview">Archived copy of Petzview</a>&#160;<a href=#fnref:7 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+</div></div>
 </div>
 </div>
 <footer class=footer>

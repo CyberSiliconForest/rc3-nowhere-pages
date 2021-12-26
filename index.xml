@@ -1,4 +1,60 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SiliconForest RC3 Nowhere</title><link>https://pages.nowhere.rc3.silicon.moe/</link><description>Recent content on SiliconForest RC3 Nowhere</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 27 Dec 2021 04:28:34 +0900</lastBuildDate><atom:link href="https://pages.nowhere.rc3.silicon.moe/index.xml" rel="self" type="application/rss+xml"/><item><title>Insecam</title><link>https://pages.nowhere.rc3.silicon.moe/posts/insecam/</link><pubDate>Mon, 27 Dec 2021 04:28:34 +0900</pubDate><guid>https://pages.nowhere.rc3.silicon.moe/posts/insecam/</guid><description/><content/></item><item><title>Kve</title><link>https://pages.nowhere.rc3.silicon.moe/posts/kve/</link><pubDate>Mon, 27 Dec 2021 04:26:47 +0900</pubDate><guid>https://pages.nowhere.rc3.silicon.moe/posts/kve/</guid><description>KVE? There was a CVE, short of Common Vulnerabilities and Exposures, a public database of disclosed computer security flaws. It benefits many system administrators and security researchers by sharing the known vulnerability and helping them to fix those holes.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SiliconForest RC3 Nowhere</title><link>https://pages.nowhere.rc3.silicon.moe/</link><description>Recent content on SiliconForest RC3 Nowhere</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 27 Dec 2021 04:28:34 +0900</lastBuildDate><atom:link href="https://pages.nowhere.rc3.silicon.moe/index.xml" rel="self" type="application/rss+xml"/><item><title>Insecam</title><link>https://pages.nowhere.rc3.silicon.moe/posts/insecam/</link><pubDate>Mon, 27 Dec 2021 04:28:34 +0900</pubDate><guid>https://pages.nowhere.rc3.silicon.moe/posts/insecam/</guid><description>Insecam and Korea Insecam is a website which crawls the insecure network cameras connected to the Internet without any authentication throughout the world. According to the website&amp;rsquo;s FAQ, they are collecting the network cameras without password protection and listing the live video feed of them. They also claims that the cameras are not hacked, but the vulnerable software may enable the remote access without any authentication. The website provides a grouped view by camera manufacturers, installed countries and cities, places.</description><content>&lt;h1 id="insecam-and-korea">Insecam and Korea&lt;/h1>
+&lt;p>&lt;a href="http://insecam.org">Insecam&lt;/a> is a website which crawls the insecure network cameras connected to the Internet without any authentication throughout the world.
+According to the &lt;a href="http://insecam.org/en/faq/">website&amp;rsquo;s FAQ&lt;/a>, they are collecting the network cameras without password protection and listing the live video feed of them.
+They also claims that the cameras are not hacked, but the vulnerable software may enable the remote access without any authentication.
+The website provides a grouped view by camera manufacturers, installed countries and cities, places.
+Unless the network camera is supposed to broadcast a public video stream, the owner of the network camera is supposed to apply at least a proper password authentication to protect their video stream.&lt;/p>
+&lt;p>The installation and usage of video surveillance devices are regulated by Personal Information Protection Act&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>, Article 25.
+According to the law, the owner of the video surveilance device must secure their device in order to protect the personal information.
+In addition, the device must not record any voice and record places outside of its intended purpose.
+Regardless of the legal code, the number of video surveilance devices installed by public institutions are in constant rise&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>, and about 1.3 million devices are installed as of 2020.
+There is no accurate number of video surveilance devices installed by private person, but one report estimates the number as 13 million devices in 2017&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>.
+In addition, about 89 percent of Korean cars have dashcams installed in 2019&lt;sup id="fnref:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup>.&lt;/p>
+&lt;p>At least the legal code seems to be good, but how come the picture below became the reality?&lt;/p>
+&lt;p>&lt;img src="../images/insecam_korea.png" alt="South Korea is in 2nd place of Insecam">&lt;/p>
+&lt;p>As of the time of the writing, South Korea is ranked 2nd in the &lt;a href="http://insecam.org">Insecam&lt;/a>&amp;rsquo;s country list.
+To make things even more ironical, Insecam website is blocked in Korea by Korea Communications Standards Commission (KCSC).
+The block was decided around early 2016&lt;sup id="fnref:5">&lt;a href="#fn:5" class="footnote-ref" role="doc-noteref">5&lt;/a>&lt;/sup>, to &amp;ldquo;protect&amp;rdquo; the privacy of Korean people.
+This block is not effective against those who outside of Korea, and as everyone knows, cybercriminals these days do not know the national border.
+The root cause of this problem &amp;ndash; unprotected network camera &amp;ndash; remains unsolved, as Korean police decided that there is no way to inform the individuals on the problem of their network camera&lt;sup id="fnref:5">&lt;a href="#fn:5" class="footnote-ref" role="doc-noteref">5&lt;/a>&lt;/sup>.
+To make things more worse, rebadged cheap camera by Korean companies often do not get adequate support from the original manufacturer, leaving the users vulnerable.
+This was demonstrated in Petzview incident around 2018.&lt;/p>
+&lt;h2 id="the-petzview-incident">The Petzview Incident&lt;/h2>
+&lt;p>There was a network camera named Petzview, which was marketed towards companion animal owners to monitor their loved ones from outside of their home.
+The device was sold for several years, and was used by not only individual peoples but also by veterinary clinics too.
+The hardware itself was not that special as seen in the image below.&lt;/p>
+&lt;p>&lt;img src="../images/petzview.jpg" alt="Petzview hardware">&lt;/p>
+&lt;p>In October 2018, Petzview announced that they will shut down their web service&lt;sup id="fnref:6">&lt;a href="#fn:6" class="footnote-ref" role="doc-noteref">6&lt;/a>&lt;/sup> to share the live footage of Petzview devices&lt;sup id="fnref:7">&lt;a href="#fn:7" class="footnote-ref" role="doc-noteref">7&lt;/a>&lt;/sup> and discontinue the mobile app to control the network camera.
+According to the news report, an owner of Petzview network camera found that their camera had been compromised in &lt;strong>2012&lt;/strong>, and found the security vulnerability in &lt;strong>2014&lt;/strong>, which he exploited to illegally record the other Petzview users for at least 4 years.
+The attack was only discovered in 2018, and the hacker was arrested for privacy invasions by illegal recording.
+Well, if you look into the source code of the web archive, you may find interesting thing there which tells about the security mindset of the Petzview designers :(&lt;/p>
+&lt;p>As long as these kind of insecure network cameras are connected to the Internet without software updates, and Korean authorities are burying their head in the sand like just blocking the Insecam website instead of regulating the market tightly, we don&amp;rsquo;t believe that the number of network cameras listed in the Insecam will decrease.&lt;/p>
+&lt;section class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1" role="doc-endnote">
+&lt;p>&lt;a href="https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%B2%95">개인정보보호법 (in Korean)&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2" role="doc-endnote">
+&lt;p>&lt;a href="https://www.index.go.kr/potal/main/EachDtlPageDetail.do?idx_cd=2855">공공기관 CCTV 설치 및 운영 (in Korean)&lt;/a>&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:3" role="doc-endnote">
+&lt;p>&lt;a href="https://www.cctvnews.co.kr/news/articleView.html?idxno=120089">공공안전 책임지는 CCTV, 보급의 역사와 현황 (in Korean)&lt;/a>&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:4" role="doc-endnote">
+&lt;p>&lt;a href="https://www.trendmonitor.co.kr/tmweb/trend/allTrend/detail.do?bIdx=1780&amp;amp;code=0304&amp;amp;trendType=CKOREA">점점 더 강조되는 ‘차량용 블랙박스’의 중요성, 이제 운전자의 ‘필수품’으로 자리잡아 (in Korean)&lt;/a>&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:5" role="doc-endnote">
+&lt;p>&lt;a href="http://www.incheonilbo.com/news/articleView.html?idxno=704639">공기관·유치원·학교 CCTV 해외노출 &amp;lsquo;무방비&amp;rsquo; (in Korean)&lt;/a>&amp;#160;&lt;a href="#fnref:5" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:6" role="doc-endnote">
+&lt;p>&lt;a href="https://www.news1.kr/articles/?3467060">해킹됐던 반려동물 전문 IP카메라 사이트 &amp;lsquo;펫츠뷰&amp;rsquo; 내달말 폐쇄 (in Korean)&lt;/a>&amp;#160;&lt;a href="#fnref:6" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:7" role="doc-endnote">
+&lt;p>&lt;a href="http://web.archive.org/web/20180831090559/http://petstory.co/bsbbs/list?tn=petview">Archived copy of Petzview&lt;/a>&amp;#160;&lt;a href="#fnref:7" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/section></content></item><item><title>Kve</title><link>https://pages.nowhere.rc3.silicon.moe/posts/kve/</link><pubDate>Mon, 27 Dec 2021 04:26:47 +0900</pubDate><guid>https://pages.nowhere.rc3.silicon.moe/posts/kve/</guid><description>KVE? There was a CVE, short of Common Vulnerabilities and Exposures, a public database of disclosed computer security flaws. It benefits many system administrators and security researchers by sharing the known vulnerability and helping them to fix those holes.
 And, Korean government thought, they want to have one, but they thought sharing that information publically will cause many troubles. So, they built the vulnerability database called KVE but keep its content secret, even its abstract information such as severity, impact, type of vulnerability.</description><content>&lt;h1 id="kve">KVE?&lt;/h1>
 &lt;p>There was a CVE, short of Common Vulnerabilities and Exposures, a public database of disclosed computer security flaws. It benefits many system administrators and security researchers by sharing the known vulnerability and helping them to fix those holes.&lt;/p>
 &lt;p>And, Korean government thought, they want to have one, but they thought sharing that information publically will cause many troubles. So, they built the vulnerability database called KVE but keep its content secret, even its abstract information such as severity, impact, type of vulnerability.&lt;/p>
