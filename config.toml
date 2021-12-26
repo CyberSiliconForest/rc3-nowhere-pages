@@ -1,4 +1,4 @@
-baseURL = 'https://cybersiliconforest.github.io/rc3-nowhere-pages/'
+baseURL = 'https://pages.nowhere.rc3.silicon.moe/'
 languageCode = 'en-us'
 title = 'SiliconForest RC3 Nowhere'
 theme = 'terminal'
