@@ -3,7 +3,9 @@
 <title>K Builtin Iot :: SiliconForest RC3 Nowhere</title>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=description content>
+<meta name=description content="Security of Korean built-in home automation system In South Korea, lots of new apartments are high-grade IT infrastructure certified. This certification requires the house has the following facilities by default:
+Direct fibre-optic connection to the home Home automation system Built-in Wi-Fi access point and more things that are not so much important in this context
+As a result, lots of construction companies install those systems by default. The problem is, the devices' firmware security is not examined at all and, most of them are left unmaintained, unpatched for decades.">
 <meta name=keywords content=",">
 <meta name=robots content="noodp">
 <link rel=canonical href=https://cybersiliconforest.github.io/rc3-nowhere-pages/posts/k-builtin-iot/>
@@ -15,7 +17,9 @@
 <meta property="og:locale" content="en">
 <meta property="og:type" content="article">
 <meta property="og:title" content="K Builtin Iot">
-<meta property="og:description" content>
+<meta property="og:description" content="Security of Korean built-in home automation system In South Korea, lots of new apartments are high-grade IT infrastructure certified. This certification requires the house has the following facilities by default:
+Direct fibre-optic connection to the home Home automation system Built-in Wi-Fi access point and more things that are not so much important in this context
+As a result, lots of construction companies install those systems by default. The problem is, the devices' firmware security is not examined at all and, most of them are left unmaintained, unpatched for decades.">
 <meta property="og:url" content="https://cybersiliconforest.github.io/rc3-nowhere-pages/posts/k-builtin-iot/">
 <meta property="og:site_name" content="SiliconForest RC3 Nowhere">
 <meta property="og:image" content="https://cybersiliconforest.github.io/rc3-nowhere-pages/">
@@ -49,7 +53,24 @@ Terminal
 #<a href=https://cybersiliconforest.github.io/rc3-nowhere-pages/tags/></a>&nbsp;
 #<a href=https://cybersiliconforest.github.io/rc3-nowhere-pages/tags/></a>&nbsp;
 </span>
-<div class=post-content></div>
+<div class=post-content><div>
+<h1 id=security-of-korean-built-in-home-automation-system>Security of Korean built-in home automation system<a href=#security-of-korean-built-in-home-automation-system class=hanchor arialabel=Anchor>&#8983;</a> </h1>
+<p>In South Korea, lots of new apartments are high-grade IT infrastructure certified. This certification requires the house has the following facilities by default:</p>
+<p>Direct fibre-optic connection to the home
+Home automation system
+Built-in Wi-Fi access point
+and more things that are not so much important in this context</p>
+<p>As a result, lots of construction companies install those systems by default. The problem is, the devices' firmware security is not examined at all and, most of them are left unmaintained, unpatched for decades.</p>
+<h2 id=problems-in-the-home-automation-system>Problems in the home automation system<a href=#problems-in-the-home-automation-system class=hanchor arialabel=Anchor>&#8983;</a> </h2>
+<h3 id=always-trusts-internal-network>Always trusts internal network.<a href=#always-trusts-internal-network class=hanchor arialabel=Anchor>&#8983;</a> </h3>
+<p>The built-in home automation system fully trusts the internal network. The control server sends the command without any authentication or encryption and, the home automation controller accepts the connection if it has a &ldquo;valid&rdquo; IP address. They do not care it is spoofed or not.</p>
+<p>As a result, every room can send a spoofed packet to control someone else&rsquo;s home automation system.</p>
+<h3 id=no-one-is-listening-to-the-ism-band-right>No one is listening to the ISM band. Right?<a href=#no-one-is-listening-to-the-ism-band-right class=hanchor arialabel=Anchor>&#8983;</a> </h3>
+<p>Lots of Korean built-in home automation system has integrated RF transmitter which opens the entrance door. So it must be designed with security in mind. Right?</p>
+<p>However, lots of them just send RF signals without any anti-replay mechanism and can be replayed without much effort. Grab the SDR and replay the signal. Door unlocks.</p>
+<h3 id=let-the-telnet-listen>Let the telnet listen<a href=#let-the-telnet-listen class=hanchor arialabel=Anchor>&#8983;</a> </h3>
+<p>[TODO]</p>
+</div></div>
 </div>
 </div>
 <footer class=footer>
