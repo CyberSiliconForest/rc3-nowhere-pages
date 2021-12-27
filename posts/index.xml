@@ -96,17 +96,64 @@ There used be much more smaller Korean vendors selling home WRT, but they got co
 Other global vendors such as Asus, Belkin, D-Link are usually bought by power users who is not satisfied by performance or software of what ipTIME or other Korean vendors provide, and have limited market presence.
 This makes the situation hard in several aspects: local brand WRTs got OpenWrt support only in recent days, while the &amp;ldquo;stock&amp;rdquo; firmware of those WRTs have security holes and patched them in very clever way.&lt;/p>
 &lt;h2 id="iptime-and-gpl-openwrt">ipTIME and GPL, OpenWrt&lt;/h2>
-&lt;p>ipTIME in year 2007 claimed that &amp;ldquo;it is not fair that the GPL enforcement is harsh on small-sized enterprises&amp;rdquo;, however, they slowly changed their mind and opened up some of their GPLed source codes around 2017.
-In addition to this, they used Realtek &amp;ndash; infamous for their non-support status in OpenWrt &amp;ndash; in the past and changed their chipsets during mid-2010s.
-As a result (and lack of general interest), not many devices of ipTIME is listed as supported device of OpenWrt&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>.&lt;/p>
-&lt;p>(TODO)&lt;/p>
+&lt;p>ipTIME in year 2007 claimed that &amp;ldquo;it is not fair that the GPL enforcement is harsh on small-sized enterprises&amp;rdquo;&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>, however, they slowly changed their mind and opened up some of their GPLed source codes around 2017.
+In addition to this, they used Realtek &amp;ndash; infamous for their non-support status in OpenWrt &amp;ndash; in the past and changed their chipsets to other than Realtek during mid-2010s.
+As a result (and lack of general interest), not many devices of ipTIME is listed as supported device of OpenWrt&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>.
+One exceptional case is FREEZIO&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>, where the company opened up the source code which is based on the OpenWrt.
+But as far as we know, not many vendors seems to comply with the terms of GPL.
+There are some other Korean WRTs listed in the hardware list of OpenWrt, but these are mostly reverse engineered from the ground and adapted the source code from other routers sharing the same SoCs, as vendors are not usually opening up their code either.&lt;/p>
+&lt;p>A small number of Korean hackers are doing, and most of them are also hanging out in the Jitsi here, so feel free to ask them about the experience :)&lt;/p>
 &lt;h2 id="the-home-router-insecurity">The Home Router (In)security&lt;/h2>
-&lt;p>(TODO)&lt;/p>
+&lt;p>We found the input sanitization bug leading to the remote code execution on one of the Korean WRT.
+Unfortunately, quite a lot of text field&amp;rsquo;s inputs in the configuration page are piped into the shell scripts of Korean WRTs, and not many vendors take care about proper sanitzation or implement without using shell script.
+We have reported the problem to the vendor and KISA (Korea Internet Security Agency) bug bounty program about this problem.
+Several vendors have responded in various 🤦 ways.&lt;/p>
+&lt;p>One of the vendor just removed the problematic text input field in their next firmware release, citing the feature as auxilary diagnostic function.&lt;/p>
+&lt;p>One of the vendor have &amp;ldquo;implemented&amp;rdquo; some input text field sanitization method, which looks for known keywords using &lt;code>strchr&lt;/code> and &lt;code>strstr&lt;/code> function.
+Let&amp;rsquo;s see how they implemented this function (and prepare some popcorn for the function&amp;rsquo;s name):&lt;/p>
+&lt;pre tabindex="0">&lt;code>bool check_hacking(char *cmd, int len) {
+/* snip */
+ret = strchr(cmd, ';');
+if (ret != 0) return true;
+ret = strchr(cmd, '|');
+if (ret != 0) return true;
+ret = strchr(cmd, '&amp;amp;');
+if (ret != 0) return true;
+ret = strchr(cmd, '\');
+if (ret != 0) return true;
+ret = strchr(cmd, '`');
+if (ret != 0) return true;
+/* snip */
+ret = strstr(cmd, &amp;quot;wget&amp;quot;);
+if (ret != 0) return true;
+ret = strstr(cmd, &amp;quot;echo&amp;quot;);
+if (ret != 0) return true;
+ret = strstr(cmd, &amp;quot;/bin/&amp;quot;);
+if (ret != 0) return true;
+ret = strstr(cmd, &amp;quot;sh&amp;quot;);
+if (ret != 0) return true;
+/* snip */
+ret = strchr(cmd, '[');
+if (ret != 0) return true;
+ret = strchr(cmd, '&amp;gt;');
+if (ret != 0) return true;
+return false;
+}
+&lt;/code>&lt;/pre>&lt;p>To make things more worse, even we have found the bug in the &amp;ldquo;sanitization&amp;rdquo; method after they had fixed the original problem, the vendor claimed that the product is EOL and no updates will be provided.
+We believe that the EOL is just a made-up cause, as the product in question is actively sold in the market when we got the vendor&amp;rsquo;s EOL claim.
+What should we do?
+We have no idea.&lt;/p>
 &lt;section class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
 &lt;li id="fn:1" role="doc-endnote">
-&lt;p>&lt;a href="https://openwrt.org/toh/start?dataflt%5BBrand*%7E%5D=iptime">OpenWrt Wiki: Table of Hardware&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://iptime.com/iptime/?page_id=174&amp;amp;nType=UFFscUh5dURlaTNsU1BwZGlNV2czcWpRb3B1QldXK3Rad3IyazFGNUw5WHZXOHpneCtDN0gvZGpGNjMzQjNxelEzWXMwdEsyRmJuUTJoOU1BQmEwZVhEUFRneEV1bmlDY2hROUlMS2tVZCsrYnFEQVV6cmlnZjNVL3h1aG5HalhoQTlTU1hLRWsrSHJNSDFzVlYzbHhFWnVpUDliVzd1SGc2b3lRYVox">re: Firmware License 문제 문의 (in Korean)&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2" role="doc-endnote">
+&lt;p>&lt;a href="https://openwrt.org/toh/start?dataflt%5BBrand*%7E%5D=iptime">OpenWrt Wiki: Table of Hardware&lt;/a>&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:3" role="doc-endnote">
+&lt;p>&lt;a href="https://github.com/ZIORouter/openwrt_for_mtk">github: ZIORouter/openwrt_for_mtk&lt;/a>&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
 &lt;/section></content></item></channel></rss>
