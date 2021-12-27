@@ -3,8 +3,7 @@
 <title>Kve :: SiliconForest RC3 Nowhere</title>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=description content="KVE? There was a CVE, short of Common Vulnerabilities and Exposures, a public database of disclosed computer security flaws. It benefits many system administrators and security researchers by sharing the known vulnerability and helping them to fix those holes.
-And, Korean government thought, they want to have one, but they thought sharing that information publically will cause many troubles. So, they built the vulnerability database called KVE but keep its content secret, even its abstract information such as severity, impact, type of vulnerability.">
+<meta name=description content="What is KVE? South Korea is always actively insisting on the &amp;ldquo;platform sovereignty&amp;rdquo;. After a boom caused by Squid Game on Netflix, some Koreans thought that Netflix is not giving a fair share to Korean studios1 and complained why there is no local equivalent of Netflix which can attract users like what Squid Game did. Even an ISP sued Netflix2 citing that they are not paying enough for the traffic caused by Netflix services.">
 <meta name=keywords content=",">
 <meta name=robots content="noodp">
 <link rel=canonical href=https://pages.nowhere.rc3.silicon.moe/posts/kve/>
@@ -16,8 +15,7 @@ And, Korean government thought, they want to have one, but they thought sharing 
 <meta property="og:locale" content="en">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Kve">
-<meta property="og:description" content="KVE? There was a CVE, short of Common Vulnerabilities and Exposures, a public database of disclosed computer security flaws. It benefits many system administrators and security researchers by sharing the known vulnerability and helping them to fix those holes.
-And, Korean government thought, they want to have one, but they thought sharing that information publically will cause many troubles. So, they built the vulnerability database called KVE but keep its content secret, even its abstract information such as severity, impact, type of vulnerability.">
+<meta property="og:description" content="What is KVE? South Korea is always actively insisting on the &amp;ldquo;platform sovereignty&amp;rdquo;. After a boom caused by Squid Game on Netflix, some Koreans thought that Netflix is not giving a fair share to Korean studios1 and complained why there is no local equivalent of Netflix which can attract users like what Squid Game did. Even an ISP sued Netflix2 citing that they are not paying enough for the traffic caused by Netflix services.">
 <meta property="og:url" content="https://pages.nowhere.rc3.silicon.moe/posts/kve/">
 <meta property="og:site_name" content="SiliconForest RC3 Nowhere">
 <meta property="og:image" content="https://pages.nowhere.rc3.silicon.moe/">
@@ -52,11 +50,60 @@ Terminal
 #<a href=https://pages.nowhere.rc3.silicon.moe/tags/></a>&nbsp;
 </span>
 <div class=post-content><div>
-<h1 id=kve>KVE?<a href=#kve class=hanchor arialabel=Anchor>&#8983;</a> </h1>
-<p>There was a CVE, short of Common Vulnerabilities and Exposures, a public database of disclosed computer security flaws. It benefits many system administrators and security researchers by sharing the known vulnerability and helping them to fix those holes.</p>
-<p>And, Korean government thought, they want to have one, but they thought sharing that information publically will cause many troubles. So, they built the vulnerability database called KVE but keep its content secret, even its abstract information such as severity, impact, type of vulnerability.</p>
-<p>As a result, the benefit of a shared vulnerability database does not exist in KVE. Security researchers waste time writing reports about duplicated vulnerabilities because they do not have access to the database. End-users and system administrators are unable to know what threat they are currently exposed because the information is kept secret.</p>
-<p>Their existence is only known to researchers through the KISA bug bounty program, which replies to the researcher&rsquo;s mail with their useless database reference ID.</p>
+<h1 id=what-is-kve>What is KVE?<a href=#what-is-kve class=hanchor arialabel=Anchor>&#8983;</a> </h1>
+<p>South Korea is always actively insisting on the &ldquo;platform sovereignty&rdquo;.
+After a boom caused by Squid Game on Netflix, some Koreans thought that Netflix is not giving a fair share to Korean studios<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup> and complained why there is no local equivalent of Netflix which can attract users like what Squid Game did.
+Even an ISP sued Netflix<sup id=fnref:2><a href=#fn:2 class=footnote-ref role=doc-noteref>2</a></sup> citing that they are not paying enough for the traffic caused by Netflix services.
+Well, we don&rsquo;t want to discuss on the Squid Game or why some of Google and Apple services are not available in Korea in this article, but that kind of mentality is prevalent in various places of Korean society.</p>
+<p>As a security researcher, everyone should know <a href=https://www.cve.org/>CVE (Common Vulnerabilities and Exposures)</a>.
+MITRE Corporation maintains a nice public database of disclosed computer security flaws.
+It benefits many system administrators and security researchers by sharing the known vulnerability and helping them to fix those holes.
+Also, the software vendors also include CVE numbers for their security patches in order to announce what security problem they fixed.
+The CVE is used globally and the vulnerability database also contains region-specific products and their vulnerabilities too.</p>
+<p>Then here comes the &ldquo;platform sovereignty&rdquo; mind of Korean institution.
+Having a local equivalent of CVE could be beneficial for overcoming language barrier, since CVE is only available in English.
+Small-sized companies may cite the language problem as the reason of not-observing best practice and fixing their security vulnerabilities, which could be mitigated by publicly funded institution giving some CVE translation<sup id=fnref:3><a href=#fn:3 class=footnote-ref role=doc-noteref>3</a></sup>.
+Now meet KVE, which is designed &ldquo;local equivalent&rdquo; of CVE.</p>
+<p>We do not deny that a localized vulnerability device can help the local software vendors and users.
+However, the biggest difference between CVE and KVE is that the latter database is only available internally within KrCERT.
+If you search with the keyword such as &ldquo;KVE vulnerability&rdquo;, what you will get is mostly the notice in Korean and a line in changelog mentioning that the vulnerability had been fixed.
+Hmm, now what? Why there is no information of the vulnerability itself publicly available at all, even its abstract information such as severity, impact, type of vulnerability?
+Is it to covering the mistakes made by local (small) companies and not to ruin their reputation?
+We really don&rsquo;t know and want to know why we can&rsquo;t see the whole database, not the fragment.</p>
+<p>Following examples are how the KVE ID is used:</p>
+<ul>
+<li>An IP camera company &ldquo;disabled&rdquo; ONVIF access due to the missing access control on ONVIF interface allowing anyone to see the stream<sup id=fnref:4><a href=#fn:4 class=footnote-ref role=doc-noteref>4</a></sup>. Note that &ldquo;disable the feature because we can&rsquo;t secure that&rdquo; mindset is quite prevalent among small Korean companies.</li>
+<li>An archiver software patched NSIS and TAR file handling, citing the KVE ID<sup id=fnref:5><a href=#fn:5 class=footnote-ref role=doc-noteref>5</a></sup>. No one knows what is the exact problem.</li>
+<li>A web CMS software patched a security hole citing the KVE ID<sup id=fnref:6><a href=#fn:6 class=footnote-ref role=doc-noteref>6</a></sup>. Details could only be guessed from the patch.</li>
+</ul>
+<p>As a security researcher, we find that the non-public vulnerability database targetting the public produces make little or no sense at all.
+Security researchers waste time writing reports about duplicated vulnerabilities because they do not have access to the database.
+End-users and system administrators are unable to know what threat they are currently exposed because the information is kept secret, and have to rely on the mercy of software vendors.
+The KVE ID&rsquo;s existence is only known to researchers through the KISA bug bounty program, which replies to the researcher&rsquo;s mail with their useless database reference ID.
+We believe that opening up the KVE database will bring more positive effect in the future.</p>
+<section class=footnotes role=doc-endnotes>
+<hr>
+<ol>
+<li id=fn:1 role=doc-endnote>
+<p><a href=https://www.koreatimes.co.kr/www/culture/2021/12/142_319104.html>Book reveals uncomfortable truth about &lsquo;Squid Game&rsquo;s global success </a>&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+<li id=fn:2 role=doc-endnote>
+<p><a href=https://www.digitaltveurope.com/2021/10/25/netflix-says-paying-sk-broadband-over-squid-game-surge-creates-anti-competitive-environment/>Netflix says paying SK Broadband over Squid Game surge creates ‘anti-competitive environment’</a>&#160;<a href=#fnref:2 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+<li id=fn:3 role=doc-endnote>
+<p><a href=https://www.krcert.or.kr/data/secInfoList.do>취약점 정보 - KrCERT (in Korean)</a>&#160;<a href=#fnref:3 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+<li id=fn:4 role=doc-endnote>
+<p><a href="http://www.sjnetwork.co.kr/sjnetworks/bbs/board.php?bo_table=notice&wr_id=295">QCAM-K1 보안취약점 발견에 따른 패치 안내</a>&#160;<a href=#fnref:4 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+<li id=fn:5 role=doc-endnote>
+<p><a href=https://www.bandisoft.com/bandizip/updateinfo/?kr>반디집 업데이트 정보</a>&#160;<a href=#fnref:5 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+<li id=fn:6 role=doc-endnote>
+<p><a href=https://github.com/gnuboard/gnuboard5/commit/c2922aaa13fe5d9ffabd5370d67125209d5bb5a8>gnuboard/gnuboard5</a>&#160;<a href=#fnref:6 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
 </div></div>
 </div>
 </div>
