@@ -76,4 +76,30 @@ and more things that are not so much important in this context&lt;/p>
 &lt;p>Lots of Korean built-in home automation system has integrated RF transmitter which opens the entrance door. So it must be designed with security in mind. Right?&lt;/p>
 &lt;p>However, lots of them just send RF signals without any anti-replay mechanism and can be replayed without much effort. Grab the SDR and replay the signal. Door unlocks.&lt;/p>
 &lt;h3 id="let-the-telnet-listen">Let the telnet listen&lt;/h3>
-&lt;p>[TODO]&lt;/p></content></item><item><title>K Home Wrts</title><link>https://pages.nowhere.rc3.silicon.moe/posts/k-home-wrts/</link><pubDate>Mon, 27 Dec 2021 02:35:38 +0900</pubDate><guid>https://pages.nowhere.rc3.silicon.moe/posts/k-home-wrts/</guid><description>K-Home-WRTs</description><content>&lt;h1 id="k-home-wrts">K-Home-WRTs&lt;/h1></content></item></channel></rss>
+&lt;p>[TODO]&lt;/p></content></item><item><title>K Home Wrts</title><link>https://pages.nowhere.rc3.silicon.moe/posts/k-home-wrts/</link><pubDate>Mon, 27 Dec 2021 02:35:38 +0900</pubDate><guid>https://pages.nowhere.rc3.silicon.moe/posts/k-home-wrts/</guid><description>K-Home-WRTs The concept of router freedom in South Korea is&amp;hellip; well, not actively discussed in this moment. The following figure is copied from BEREC report explaining the network termination point. While using self-bought modem is &amp;ldquo;technically&amp;rdquo; possible, but this happens very seldom in reality and the modem is supplied by the ISP at a lower rate or even for free, regardless of the type of last mile (e.g. DOCSIS, FTTx, ethernet).</description><content>&lt;h1 id="k-home-wrts">K-Home-WRTs&lt;/h1>
+&lt;p>The concept of &lt;a href="https://fsfe.org/activities/routers/routers.en.html">router freedom&lt;/a> in South Korea is&amp;hellip; well, not actively discussed in this moment.
+The following figure is copied from BEREC report explaining the network termination point.
+While using self-bought modem is &amp;ldquo;technically&amp;rdquo; possible, but this happens very seldom in reality and the modem is supplied by the ISP at a lower rate or even for free, regardless of the type of last mile (e.g. DOCSIS, FTTx, ethernet).
+Most of the modems supplied by the ISP does not have an integrated router function, therefore either ISP-supplied router or a self-bought router could be used.
+But wait a second&amp;hellip; Ethernet as a last mile?
+Most South Koreans lives in an apartment, and some apartment provide an ethernet connection directly to the each households, effectively eliminating any kind of modem and the router is freely choiceable.&lt;/p>
+&lt;p>&lt;img src="../images/ntp.png" alt="Illustration of network termination points">&lt;/p>
+&lt;p>One of the most popular WRT in private households is &lt;a href="https://iptime.com/iptime/">ipTIME&lt;/a>, followed by other Korean vendors such as WeVO.
+There used be much more smaller Korean vendors selling home WRT, but they got consolidated in the market throughout the last decade.
+Other global vendors such as Asus, Belkin, D-Link are usually bought by power users who is not satisfied by performance or software of what ipTIME or other Korean vendors provide, and have limited market presence.
+This makes the situation hard in several aspects: local brand WRTs got OpenWrt support only in recent days, while the &amp;ldquo;stock&amp;rdquo; firmware of those WRTs have security holes and patched them in very clever way.&lt;/p>
+&lt;h2 id="iptime-and-gpl-openwrt">ipTIME and GPL, OpenWrt&lt;/h2>
+&lt;p>ipTIME in year 2007 claimed that &amp;ldquo;it is not fair that the GPL enforcement is harsh on small-sized enterprises&amp;rdquo;, however, they slowly changed their mind and opened up some of their GPLed source codes around 2017.
+In addition to this, they used Realtek &amp;ndash; infamous for their non-support status in OpenWrt &amp;ndash; in the past and changed their chipsets during mid-2010s.
+As a result (and lack of general interest), not many devices of ipTIME is listed as supported device of OpenWrt&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>.&lt;/p>
+&lt;p>(TODO)&lt;/p>
+&lt;h2 id="the-home-router-insecurity">The Home Router (In)security&lt;/h2>
+&lt;p>(TODO)&lt;/p>
+&lt;section class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1" role="doc-endnote">
+&lt;p>&lt;a href="https://openwrt.org/toh/start?dataflt%5BBrand*%7E%5D=iptime">OpenWrt Wiki: Table of Hardware&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/section></content></item></channel></rss>

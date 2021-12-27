@@ -3,7 +3,7 @@
 <title>K Home Wrts :: SiliconForest RC3 Nowhere</title>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=description content="K-Home-WRTs ">
+<meta name=description content="K-Home-WRTs The concept of router freedom in South Korea is&amp;hellip; well, not actively discussed in this moment. The following figure is copied from BEREC report explaining the network termination point. While using self-bought modem is &amp;ldquo;technically&amp;rdquo; possible, but this happens very seldom in reality and the modem is supplied by the ISP at a lower rate or even for free, regardless of the type of last mile (e.g. DOCSIS, FTTx, ethernet).">
 <meta name=keywords content=",">
 <meta name=robots content="noodp">
 <link rel=canonical href=https://pages.nowhere.rc3.silicon.moe/posts/k-home-wrts/>
@@ -15,7 +15,7 @@
 <meta property="og:locale" content="en">
 <meta property="og:type" content="article">
 <meta property="og:title" content="K Home Wrts">
-<meta property="og:description" content="K-Home-WRTs ">
+<meta property="og:description" content="K-Home-WRTs The concept of router freedom in South Korea is&amp;hellip; well, not actively discussed in this moment. The following figure is copied from BEREC report explaining the network termination point. While using self-bought modem is &amp;ldquo;technically&amp;rdquo; possible, but this happens very seldom in reality and the modem is supplied by the ISP at a lower rate or even for free, regardless of the type of last mile (e.g. DOCSIS, FTTx, ethernet).">
 <meta property="og:url" content="https://pages.nowhere.rc3.silicon.moe/posts/k-home-wrts/">
 <meta property="og:site_name" content="SiliconForest RC3 Nowhere">
 <meta property="og:image" content="https://pages.nowhere.rc3.silicon.moe/">
@@ -51,6 +51,32 @@ Terminal
 </span>
 <div class=post-content><div>
 <h1 id=k-home-wrts>K-Home-WRTs<a href=#k-home-wrts class=hanchor arialabel=Anchor>&#8983;</a> </h1>
+<p>The concept of <a href=https://fsfe.org/activities/routers/routers.en.html>router freedom</a> in South Korea is&mldr; well, not actively discussed in this moment.
+The following figure is copied from BEREC report explaining the network termination point.
+While using self-bought modem is &ldquo;technically&rdquo; possible, but this happens very seldom in reality and the modem is supplied by the ISP at a lower rate or even for free, regardless of the type of last mile (e.g. DOCSIS, FTTx, ethernet).
+Most of the modems supplied by the ISP does not have an integrated router function, therefore either ISP-supplied router or a self-bought router could be used.
+But wait a second&mldr; Ethernet as a last mile?
+Most South Koreans lives in an apartment, and some apartment provide an ethernet connection directly to the each households, effectively eliminating any kind of modem and the router is freely choiceable.</p>
+<p><img src=../images/ntp.png alt="Illustration of network termination points"></p>
+<p>One of the most popular WRT in private households is <a href=https://iptime.com/iptime/>ipTIME</a>, followed by other Korean vendors such as WeVO.
+There used be much more smaller Korean vendors selling home WRT, but they got consolidated in the market throughout the last decade.
+Other global vendors such as Asus, Belkin, D-Link are usually bought by power users who is not satisfied by performance or software of what ipTIME or other Korean vendors provide, and have limited market presence.
+This makes the situation hard in several aspects: local brand WRTs got OpenWrt support only in recent days, while the &ldquo;stock&rdquo; firmware of those WRTs have security holes and patched them in very clever way.</p>
+<h2 id=iptime-and-gpl-openwrt>ipTIME and GPL, OpenWrt<a href=#iptime-and-gpl-openwrt class=hanchor arialabel=Anchor>&#8983;</a> </h2>
+<p>ipTIME in year 2007 claimed that &ldquo;it is not fair that the GPL enforcement is harsh on small-sized enterprises&rdquo;, however, they slowly changed their mind and opened up some of their GPLed source codes around 2017.
+In addition to this, they used Realtek &ndash; infamous for their non-support status in OpenWrt &ndash; in the past and changed their chipsets during mid-2010s.
+As a result (and lack of general interest), not many devices of ipTIME is listed as supported device of OpenWrt<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup>.</p>
+<p>(TODO)</p>
+<h2 id=the-home-router-insecurity>The Home Router (In)security<a href=#the-home-router-insecurity class=hanchor arialabel=Anchor>&#8983;</a> </h2>
+<p>(TODO)</p>
+<section class=footnotes role=doc-endnotes>
+<hr>
+<ol>
+<li id=fn:1 role=doc-endnote>
+<p><a href="https://openwrt.org/toh/start?dataflt%5BBrand*%7E%5D=iptime">OpenWrt Wiki: Table of Hardware</a>&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
 </div></div>
 </div>
 </div>
