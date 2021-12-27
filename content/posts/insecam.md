@@ -53,7 +53,7 @@ Well, if you look into the source code of the web archive, you may find interest
 
 As long as these kind of insecure network cameras are connected to the Internet without software updates, and Korean authorities are burying their head in the sand like just blocking the Insecam website instead of regulating the market tightly, we don't believe that the number of network cameras listed in the Insecam will decrease.
 
-[^pipa]: [개인정보보호법 (in Korean)](https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%B2%95)
+[^pipa]: [개인정보보호법 (in Korean)](https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%B2%95), [Non-binding translation in English](https://elaw.klri.re.kr/kor_service/lawView.do?hseq=53044&lang=ENG)
 [^public-cctv-stats]: [공공기관 CCTV 설치 및 운영 (in Korean)](https://www.index.go.kr/potal/main/EachDtlPageDetail.do?idx_cd=2855)
 [^cctvnews]: [공공안전 책임지는 CCTV, 보급의 역사와 현황 (in Korean)](https://www.cctvnews.co.kr/news/articleView.html?idxno=120089)
 [^dashcam]: [점점 더 강조되는 ‘차량용 블랙박스’의 중요성, 이제 운전자의 ‘필수품’으로 자리잡아 (in Korean)](https://www.trendmonitor.co.kr/tmweb/trend/allTrend/detail.do?bIdx=1780&code=0304&trendType=CKOREA)
