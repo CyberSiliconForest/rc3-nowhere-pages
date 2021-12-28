@@ -1,8 +1,15 @@
----
-title: "About Siliconforest"
-date: 2021-12-28T23:23:06+09:00
-draft: true
----
++++
+title = "About Siliconforest"
+date = "2021-12-27T04:28:34+09:00"
+author = ""
+authorTwitter = "" #do not include @
+cover = ""
+tags = ["", ""]
+keywords = ["", ""]
+description = ""
+showFullContent = false
+readingTime = false
++++
 
 # About SiliconForest
 
